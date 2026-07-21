@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockHe — GiMi 0.1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">RH</div>
+                <div class="logo-text">
+                    <h1>RockHe</h1>
+                    <span>GiMi 0.1</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="clear-btn" class="btn-icon" title="Clear chat">🗑️</button>
+                <button id="settings-btn" class="btn-icon" title="Settings">⚙️</button>
+            </div>
+        </header>
+
+        <!-- Chat Thread -->
+        <main class="chat-thread" id="chat-thread">
+            <div class="welcome">
+                <h2>🪨 Welcome to RockHe</h2>
+                <p>GiMi 0.1 — Local AI for coding and conversation.</p>
+                <div class="quick-actions">
+                    <button class="quick-btn" data-prompt="Explain recursion in Python">🐍 Recursion</button>
+                    <button class="quick-btn" data-prompt="Write a REST API in FastAPI">⚡ FastAPI</button>
+                    <button class="quick-btn" data-prompt="Debug this code: def add(a,b): return a-b">🐛 Debug</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-area">
+            <div class="mode-toggle">
+                <button id="mode-chat" class="mode-btn active">Chat</button>
+                <button id="mode-code" class="mode-btn">Code</button>
+            </div>
+            <div class="text-box">
+                <textarea 
+                    id="message-input" 
+                    placeholder="Ask GiMi anything..."
+                    rows="1"
+                ></textarea>
+                <button id="send-btn" class="send-btn" disabled>➤</button>
+            </div>
+            <div class="status-bar">
+                <span id="status">Ready</span>
+                <span id="token-count">0 tokens</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/markdown-renderer.js"></script>
+    <script src="js/api-client.js"></script>
+    <script src="js/components/CodeBlock.js"></script>
+    <script src="js/components/ChatThread.js"></script>
+    <script src="js/components/TextBox.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
